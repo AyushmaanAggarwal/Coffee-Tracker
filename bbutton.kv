@@ -1,0 +1,47 @@
+<ListItemWithCheckbox>:
+
+    IconLeftWidget:
+        icon: "coffee"
+
+    RightCheckbox:
+    
+windowManager: 
+    MainPage:
+        name: "Main"
+        
+        MDBoxLayout:
+            orientation: 'vertical'
+
+            MDToolbar:
+                title: "Our Top Toolbar"
+                left_action_items: [["menu"]]
+                right_action_items: [["coffee"]]
+
+            MDList:
+                ThreeLineIconListItem:
+                    text: "Three-line item with avatar"
+                    secondaxry_text: "Secondary text here"
+                    tertiary_text: "fit more text than usual"
+
+                    IconLeftWidget:
+                        icon: "coffee"
+
+            MDLabel:
+                id: my_label
+                text: "Some Stuff"
+                halign: "center"
+
+            MDBottomAppBar:
+                MDToolbar:
+                    icon: 'plus'
+                    left_action_items: [["menu", lambda x: app.presser()]]
+                    title: "Bottom Menu"
+                    type: 'bottom'
+                    mode: 'center'
+
+                    # Click The Button
+                    on_action_button: app.presser()
+                    
+                 
+    AddPage:
+        name: "Add"
