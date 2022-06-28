@@ -1,8 +1,9 @@
 class Tracker:
-    def __init__(self, date, coffee, coffee_dose, total_water, grind_size, time_weight):
+    def __init__(self, date, coffee, coffee_dose, total_water, grind_size, time_weight, brew_temp):
         self.date = date
         self.coffee = coffee
         self.dose = coffee_dose
+        self.brew_temp = brew_temp
         self.total_water = total_water
         self.grind_size = grind_size
         self.time_weight = time_weight
